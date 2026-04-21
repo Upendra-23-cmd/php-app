@@ -7,16 +7,9 @@ services:
     - "8080:80"
   depends_on : 
    - db
-
-  environment:
-    DB_HOST: db
-    DB_PORT: 3306
-    DB_USER: todouser
-    DB_PASSWORD: admin123
-    DB_NAME: todo_app
   
-  # volumes:
-  #- .:/var/www/html
+  volumes:
+  - .:/var/www/html
 
  db:
   image: mysql:8.0
