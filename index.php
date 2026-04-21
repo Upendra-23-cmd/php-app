@@ -386,18 +386,18 @@ function buildQuery(base, params) {
 // ─── Data Loading ──────────────────────────────────────────────────────────────
 
 async function loadTasks() {
-    const url = buildQuery('api/tasks.php', currentFilters);
+    const url = buildQuery('tasks.php', currentFilters);
     const data = await api(url);
     if (data.success) { tasks = data.tasks; renderTasks(); }
 }
 
 async function loadCategories() {
-    const data = await api('api/categories.php');
+    const data = await api('categories.php');
     if (data.success) { categories = data.categories; renderCategories(); populateCategorySelect(); }
 }
 
 async function loadStats() {
-    const data = await api('api/tasks.php?action=stats');
+    const data = await api('tasks.php?action=stats');
     if (data.success) {
         const s = data.stats;
         document.getElementById('statTotal').textContent = s.total;
