@@ -26,7 +26,7 @@ services:
       MYSQL_ROOT_PASSWORD: rootpass
       MYSQL_DATABASE: todo_app
       MYSQL_USER: todouser
-      MYSQL_PASSWORD: todopass
+      MYSQL_PASSWORD: admin123
   ports:
       - "3306:3306"
   volumes:
