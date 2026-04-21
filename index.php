@@ -535,7 +535,7 @@ document.getElementById('taskForm').addEventListener('submit', async (e) => {
     };
 
     const method = id ? 'PUT' : 'POST';
-    const data = await api('api/tasks.php', method, payload);
+    const data = await api('tasks.php', method, payload);
     if (data.success) {
         closeModal();
         await Promise.all([loadTasks(), loadStats(), loadCategories()]);
@@ -546,7 +546,7 @@ document.getElementById('taskForm').addEventListener('submit', async (e) => {
 });
 
 async function toggleTask(id, newStatus) {
-    const data = await api('api/tasks.php', 'PUT', { id, status: newStatus });
+    const data = await api('tasks.php', 'PUT', { id, status: newStatus });
     if (data.success) {
         await Promise.all([loadTasks(), loadStats()]);
     }
@@ -554,7 +554,7 @@ async function toggleTask(id, newStatus) {
 
 async function deleteTask(id) {
     if (!confirm('Delete this task?')) return;
-    const data = await api(`api/tasks.php?id=${id}`, 'DELETE');
+    const data = await api(`tasks.php?id=${id}`, 'DELETE');
     if (data.success) {
         await Promise.all([loadTasks(), loadStats(), loadCategories()]);
         showToast('Task deleted', 'success');
