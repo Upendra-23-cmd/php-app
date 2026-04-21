@@ -16,7 +16,7 @@ services:
     DB_Name: todo_db
   
   volumes:
-    - .:/app
+  - .:/var/www/html
 
  db:
   image: mysql:8.0
