@@ -23,7 +23,7 @@ services:
   container_name: todo_db
   restart: always
   environment:
-      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_ROOT_PASSWORD: admin123
       MYSQL_DATABASE: todo_app
       MYSQL_USER: todouser
       MYSQL_PASSWORD: admin123
