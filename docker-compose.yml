@@ -11,9 +11,9 @@ services:
   environment:
     DB_HOST: db
     DB_PORT: 3306
-    DB_USER: root
+    DB_USER: todouser
     DB_PASSWORD: admin123
-    DB_Name: todo_db
+    DB_Name: todo_app
   
   volumes:
   - .:/var/www/html
