@@ -12,7 +12,7 @@ services:
     DB_HOST: db
     DB_PORT: 3306
     DB_USER: todouser
-    DB_PASSWORD: admin123
+    DB_PASS: admin123
     DB_Name: todo_app
   
   volumes:
