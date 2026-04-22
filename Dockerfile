@@ -17,6 +17,8 @@ RUN a2enmod rewrite
 
 COPY . /var/www/html/
 
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html
 
