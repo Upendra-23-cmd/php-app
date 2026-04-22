@@ -3,6 +3,8 @@ services:
  app:
   build: .
   container_name: Todo-app
+  env_file:
+    - .env
   ports:
     - "8081:80"
   # depends_on : 
