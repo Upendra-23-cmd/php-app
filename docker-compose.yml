@@ -11,8 +11,8 @@ services:
   env-file:
   - .env
   
-  volumes:
-  - .:/var/www/html
+  # volumes:
+  # - .:/var/www/html
 
 #  db:
 #   image: mysql:8.0
