@@ -4,6 +4,9 @@ services:
     build: .
     container_name: Todo-app
 
+    container_name: Todo-app-test
+    networks:
+    - todo-network
     environment:
       DB_HOST: database-1.cczouquwokjr.us-east-1.rds.amazonaws.com
       DB_USER: admin
@@ -13,6 +16,11 @@ services:
 
     ports:
       - "8081:80"
+      - "8082:80"
+networks:
+  todo-network:
+
+
   # depends_on : 
   #  - db
 
