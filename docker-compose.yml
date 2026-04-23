@@ -3,8 +3,6 @@ services:
   app:
     build: .
     container_name: Todo-app
-
-    container_name: Todo-app-test
     networks:
     - todo-network
     environment:
