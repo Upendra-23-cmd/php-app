@@ -23,7 +23,7 @@ loadEnv(__DIR__ . '/.env');
 // ─── Read from environment variables (Docker / CodeBuild / RDS) ───────────────
 define('DB_HOST', getenv('DB_HOST') ?: 'database-1.cczouquwokjr.us-east-1.rds.amazonaws.com');
 define('DB_USER', getenv('DB_USER') ?: 'admin');
-define('DB_PASS', getenv('DB_PASS') ?: '');   // ✅ Fixed: was DB_PASSWORD
+define('DB_PASS', getenv('DB_PASS') ?: 'Admin1232003');   // ✅ Fixed: was DB_PASSWORD
 define('DB_NAME', getenv('DB_NAME') ?: 'todo_app');
 define('DB_PORT', (int)(getenv('DB_PORT') ?: 3306));
 
