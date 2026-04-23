@@ -1,16 +1,18 @@
 version: '3.2'
 services:
- app:
-  build: .
-  container_name: Todo-app
- environment:
-    DB_HOST=database-1.cczouquwokjr.us-east-1.rds.amazonaws.com
-    DB_USER=admin
-    DB_PASS=Admin1232003
-    DB_NAME=todo_app
-    DB_PORT=3306
-  ports:
-    - "8081:80"
+  app:
+    build: .
+    container_name: Todo-app
+
+    environment:
+      DB_HOST: database-1.cczouquwokjr.us-east-1.rds.amazonaws.com
+      DB_USER: admin
+      DB_PASS: Admin1232003
+      DB_NAME: todo_app
+      DB_PORT: 3306
+
+    ports:
+      - "8081:80"
   # depends_on : 
   #  - db
 
