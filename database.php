@@ -17,6 +17,7 @@ loadEnv(__DIR__ . '/.env');
 define('DB_HOST', getenv('DB_HOST'));
 define('DB_USER', getenv('DB_USER'));
 define('DB_NAME', getenv('DB_NAME'));
+define('DB_PASS', getenv('DB_PASS'));
 
 // ✅ SINGLE SOURCE OF TRUTH
 $DB_HOST = getenv('DB_HOST') ?: 'database-1.cczouquwokjr.us-east-1.rds.amazonaws.com';
