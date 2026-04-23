@@ -14,6 +14,10 @@ function loadEnv($path) {
 
 loadEnv(__DIR__ . '/.env');
 
+define('DB_HOST', getenv('DB_HOST'));
+define('DB_USER', getenv('DB_USER'));
+define('DB_NAME', getenv('DB_NAME'));
+
 // ✅ SINGLE SOURCE OF TRUTH
 $DB_HOST = getenv('DB_HOST') ?: 'database-1.cczouquwokjr.us-east-1.rds.amazonaws.com';
 $DB_USER = getenv('DB_USER') ?: 'admin';
